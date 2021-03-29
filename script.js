@@ -48,3 +48,16 @@
             }
             
         }
+
+         //skrypt 5 instrukcje warunkowe
+         function kom(){
+            var q = parseFloat(document.getElementById("q").value); 
+            var p = parseFloat(document.getElementById("p").value); 
+           if(q%p==0){
+                document.getElementById("kom").innerHTML = "Liczba " + q + " jest podzielna przez " + p ;
+            }
+            else{
+                document.getElementById("kom").innerHTML = "Liczba " + q + " nie  jest podzielna przez " + p ;
+            }
+            
+        }
