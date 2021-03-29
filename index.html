@@ -9,7 +9,7 @@
 <body>
     <h1>Zadania dla MC z ZSE im. Mikołaja Kopernika w Skarżysku-Kam</h1> 
     <hr>
-    <h3>Kallkulator 3 liczb</h3>
+    <h3>Kallkulator sumujący trzy liczby</h3>
     <p>Podaj 3 liczby, aby je dodać.</p>
     <form>
         Pierwsza liczba: <input id="a" type="text"> <br><br>
@@ -19,7 +19,7 @@
     </form>
     <p id="wynik_sum"> </p>
     <hr>
-    <h3>Kalkulator wyliczający średnią 3 liczb</h3>
+    <h3>Kalkulator wyliczający średnią trzech liczb</h3>
     <p>Podaj 3 liczby, aby obliczyć średnią.</p>
     <form>
         Pierwsza liczba: <input id="d" type="text"> <br><br>
@@ -29,6 +29,18 @@
     </form>
     <p id="wynik_avg"> </p>
     <hr>
+    <h3>Kalkulator wyliczający sumę, różnice, iloczyn dwóch liczb</h3>
+    <p>Podaj 2 liczby, aby obliczyć ich sumę,różnice, iloczyn.</p>
+    <form>
+        Pierwsza liczba: <input id="x" type="text"> <br><br>
+        Druga liczba: <input id="y" type="text"> <br><br>
+        <button type="button" onClick="oblicz_all()">Oblicz</button> <br>
+    </form>
+    <p id="wynik_suma"> </p>
+    <p id="wynik_sub"> </p>
+    <p id="wynik_pro"> </p>
+    <hr>
+
     <script type="text/javascript">
         //tresc skryptu listing 4.1
         document.write("JavaScript<br>");
@@ -59,6 +71,19 @@
             var suma = d + e + f;
             var avg = suma/3;
             document.getElementById("wynik_avg").innerHTML = avg;
+        }
+    </script>
+    <script type="text/javascript">
+        //skrypt 3 operacje na liczbach 
+        function oblicz_all(){
+            var x = parseFloat(document.getElementById("x").value); 
+            var y = parseFloat(document.getElementById("y").value);
+            var suma = x + y;
+            var pro = x * y;
+            var sub = x - y;
+            document.getElementById("wynik_suma").innerHTML = "Suma: " + suma;
+            document.getElementById("wynik_sub").innerHTML = "Różnica: " + sub;
+            document.getElementById("wynik_pro").innerHTML = "Iloczyn: " + pro;
         }
     </script>
 </body>
