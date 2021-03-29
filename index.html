@@ -66,6 +66,24 @@
     </form>
     <p id="kom"> </p>
     <hr>
+    <h3>Tablice</h3>
+    <form>
+        Podaj liczbę: <input id="liczba" type="text"> <br><br>
+        <button type="button" onClick="tab()">Wpisz liczbę</button> <br>
+    </form>
+    <p id="wypisz"> </p>
+    <!-- Skrypt 1 z tablic-->
+    <script type="text/javascript">
+        var tablica = [];
+         function tab(){
+            var dt = tablica.length; 
+            var liczba = parseFloat(document.getElementById("liczba").value);
+            tablica[dt] = liczba;
+            document.getElementById("wypisz").innerHTML = tablica.join();
+        }
+    </script>
+    <hr>
+    <!-- Skrypt 1 z pętli-->
     <h3>Liczby od 1 do 10</h3>
     <script type="text/javascript">
         //liczby od 1 do 10
@@ -74,6 +92,7 @@
             }
     </script>
     <hr>
+    <!-- Skrypt 2 z pętli-->
     <h3>Liczby od 10 do 1</h3>
     <script type="text/javascript">
         //liczby od 10 do 1
@@ -93,6 +112,5 @@
         document.write(0xAA+"<br>");
         document.write(-0xCD);
     </script>
-    
 </body>
 </html>
