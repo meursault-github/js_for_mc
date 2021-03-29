@@ -36,3 +36,15 @@
             var wynik_sqrt =Math.sqrt(sqrt);
             document.getElementById("wynik_sqrt").innerHTML = "Pierwiastek: " + wynik_sqrt;
         }
+
+        //skrypt 4 instrukcje warunkowe
+        function oblicz_par(){
+            var par = parseFloat(document.getElementById("par").value); 
+           if(par%2==0){
+                document.getElementById("wynik_par").innerHTML = "Liczba " + par + " jest parzysta.";
+            }
+            else{
+                document.getElementById("wynik_par").innerHTML = "Liczba " + par + " jest nie parzysta.";
+            }
+            
+        }
