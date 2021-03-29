@@ -12,9 +12,19 @@
         Pierwsza liczba: <input id="a" type="text"> <br><br>
         Druga liczba: <input id="b" type="text"> <br><br>
         Trzecia liczba: <input id="c" type="text"> <br><br>
-        <button type="button" onClick="oblicz()">Oblicz</button> <br>
+        <button type="button" onClick="oblicz_sum()">Oblicz</button> <br>
     </form>
-    <p id="wynik"> </p>
+    <p id="wynik_sum"> </p>
+    <hr>
+
+    <p>Podaj 3 liczby, aby obliczyć średnią.</p>
+    <form>
+        Pierwsza liczba: <input id="d" type="text"> <br><br>
+        Druga liczba: <input id="e" type="text"> <br><br>
+        Trzecia liczba: <input id="f" type="text"> <br><br>
+        <button type="button" onClick="oblicz_avg()">Oblicz</button> <br>
+    </form>
+    <p id="wynik_avg"> </p>
     <hr>
     <script type="text/javascript">
         //tresc skryptu listing 4.1
@@ -29,14 +39,24 @@
     </script>
     <script type="text/javascript">
         //skrypt 1 operacje na liczbach 
-        function oblicz(){
+        function oblicz_sum(){
             var a = parseFloat(document.getElementById("a").value); 
-            var b = b = parseFloat(document.getElementById("b").value);
-            var c = c = parseFloat(document.getElementById("c").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
             var suma = a + b + c;
-            document.getElementById("wynik").innerHTML = suma;
+            document.getElementById("wynik_sum").innerHTML = suma;
         }
-        
+    </script>
+    <script type="text/javascript">
+        //skrypt 2 operacje na liczbach 
+        function oblicz_avg(){
+            var d = parseFloat(document.getElementById("d").value); 
+            var e = parseFloat(document.getElementById("e").value);
+            var f = parseFloat(document.getElementById("f").value);
+            var suma = d + e + f;
+            var avg = suma/3;
+            document.getElementById("wynik_avg").innerHTML = avg;
+        }
     </script>
 </body>
 </html>
