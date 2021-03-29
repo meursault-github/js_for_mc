@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umieszczanie js w html oraz typy damych</title>
+</head>
+<body>
+    <p>Podaj 3 liczby, aby je dodać.</p>
+    <form>
+        Pierwsza liczba: <input id="a" type="text"> <br><br>
+        Druga liczba: <input id="b" type="text"> <br><br>
+        Trzecia liczba: <input id="c" type="text"> <br><br>
+        <button onClick="oblicz()">Oblicz</button> <br>
+    </form>
+    <p id="wynik"></p>
+    <hr>
+    <script type="text/javascript">
+        //tresc skryptu listing 4.1
+        document.write("JavaScript<br>");
+        document.write("\"Życie jest piękne\"<br>");
+        document.write(15+"<br>");
+        document.write(100.4+"<br>");
+        document.write(-26+"<br>");
+        document.write(0.1e2+"<br>");
+        document.write(0xAA+"<br>");
+        document.write(-0xCD);
+    </script>
+    <script type="text/javascript">
+        //skrypt 1 operacje na liczbach 
+        oblicz(){
+            var a = parseFloat(document.getElementById(a)); 
+            var b = b = parseFloat(document.getElementById(b));
+            var c = c = parseFloat(document.getElementById(c));
+            var suma = a + b + c;
+            document.getElementById(wynik).innerHTML = suma;
+        }
+        
+    </script>
+</body>
+</html>
