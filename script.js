@@ -61,3 +61,27 @@
             }
             
         }
+
+        // tablice
+        var tablica = [];
+         function tab(){
+            var dt = tablica.length; 
+            var liczba = parseFloat(document.getElementById("liczba").value);
+            tablica[dt] = liczba;
+            document.getElementById("wypisz").innerHTML = tablica.join();
+
+            var max = 0;
+            for(dt=0; dt<tablica.length; dt++){ 
+                if(tablica[dt]>max){
+                    max = tablica[dt];
+                }
+            }
+            document.getElementById("wypisz1").innerHTML = "Największa wartość to: " + max;
+            
+            var sum1 = 0;
+            for(dt=0; dt<tablica.length; dt++){ 
+                    sum1 += tablica[dt];
+            }
+            var avg = sum1/tablica.length;
+            document.getElementById("wypisz2").innerHTML = "Średnia: " + avg;
+        }
