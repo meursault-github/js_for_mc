@@ -40,7 +40,14 @@
     <p id="wynik_sub"> </p>
     <p id="wynik_pro"> </p>
     <hr>
-
+    <h3>Kalkulator wyliczający pierwiastek podanej liczby</h3>
+    <p>Podaj liczbę, aby obliczyć jej pierwiastek.</p>
+    <form>
+        Pierwsza liczba: <input id="sqrt" type="text"> <br><br>
+        <button type="button" onClick="oblicz_sqrt()">Oblicz</button> <br>
+    </form>
+    <p id="wynik_sqrt"> </p>
+    <hr>
     <script type="text/javascript">
         //tresc skryptu listing 4.1
         document.write("JavaScript<br>");
@@ -51,40 +58,6 @@
         document.write(0.1e2+"<br>");
         document.write(0xAA+"<br>");
         document.write(-0xCD);
-    </script>
-    <script type="text/javascript">
-        //skrypt 1 operacje na liczbach 
-        function oblicz_sum(){
-            var a = parseFloat(document.getElementById("a").value); 
-            var b = parseFloat(document.getElementById("b").value);
-            var c = parseFloat(document.getElementById("c").value);
-            var suma = a + b + c;
-            document.getElementById("wynik_sum").innerHTML = suma;
-        }
-    </script>
-    <script type="text/javascript">
-        //skrypt 2 operacje na liczbach 
-        function oblicz_avg(){
-            var d = parseFloat(document.getElementById("d").value); 
-            var e = parseFloat(document.getElementById("e").value);
-            var f = parseFloat(document.getElementById("f").value);
-            var suma = d + e + f;
-            var avg = suma/3;
-            document.getElementById("wynik_avg").innerHTML = avg;
-        }
-    </script>
-    <script type="text/javascript">
-        //skrypt 3 operacje na liczbach 
-        function oblicz_all(){
-            var x = parseFloat(document.getElementById("x").value); 
-            var y = parseFloat(document.getElementById("y").value);
-            var suma = x + y;
-            var pro = x * y;
-            var sub = x - y;
-            document.getElementById("wynik_suma").innerHTML = "Suma: " + suma;
-            document.getElementById("wynik_sub").innerHTML = "Różnica: " + sub;
-            document.getElementById("wynik_pro").innerHTML = "Iloczyn: " + pro;
-        }
     </script>
 </body>
 </html>
