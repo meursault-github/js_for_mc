@@ -12,9 +12,9 @@
         Pierwsza liczba: <input id="a" type="text"> <br><br>
         Druga liczba: <input id="b" type="text"> <br><br>
         Trzecia liczba: <input id="c" type="text"> <br><br>
-        <button onClick="oblicz()">Oblicz</button> <br>
+        <button type="button" onClick="oblicz()">Oblicz</button> <br>
     </form>
-    <p id="wynik"></p>
+    <p id="wynik"> </p>
     <hr>
     <script type="text/javascript">
         //tresc skryptu listing 4.1
@@ -29,12 +29,12 @@
     </script>
     <script type="text/javascript">
         //skrypt 1 operacje na liczbach 
-        oblicz(){
-            var a = parseFloat(document.getElementById(a)); 
-            var b = b = parseFloat(document.getElementById(b));
-            var c = c = parseFloat(document.getElementById(c));
+        function oblicz(){
+            var a = parseFloat(document.getElementById("a").value); 
+            var b = b = parseFloat(document.getElementById("b").value);
+            var c = c = parseFloat(document.getElementById("c").value);
             var suma = a + b + c;
-            document.getElementById(wynik).innerHTML = suma;
+            document.getElementById("wynik").innerHTML = suma;
         }
         
     </script>
